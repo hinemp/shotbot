@@ -3,7 +3,7 @@ This project started as a discord bot, which you can find in my [Personal Projec
 
 I decided to move beyond the scope of a simple Discord bot, as the Discord.js library was creating limitations for me.
 
-This project is meant to display some of my React skills, as well as my ability to consume third party APIs. This is why I chose to use Bootstrap, as for right now, the style of this app does not matter to me very much.
+This project is meant to display some of my React skills, as well as my ability to consume third party APIs. This is why I chose to use Bootstrap, as for right now, the style of this app does not matter to me very much, but I still want it to look decent.
 
 ## Roadmap
 At the very least with this project, I want to implement the full functionality of my discord bot, which includes: rank lookup, the ability to compare two players in games they played together, as well as other features.
