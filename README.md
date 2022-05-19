@@ -3,18 +3,9 @@ This project started as a discord bot, which you can find in my [Personal Projec
 
 I decided to move beyond the scope of a simple Discord bot, as the Discord.js library was creating limitations for me.
 
-# Getting Started with Create React App
+This project is meant to display some of my React skills, as well as my ability to consume third party APIs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Roadmap
+At the very least with this project, I want to implement the full functionality of my discord bot, which includes: rank lookup, the ability to compare two players in games they played together, as well as other features.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+After that I hope to add a general information page, which can retrieve the latest patch notes, shop items, etc.
