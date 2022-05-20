@@ -6,7 +6,7 @@ const GameCard = ({ game }) => {
     <Card
       className="bg-dark text-white"
       style={{ width: 'fit-content', maxHeight: '100%', margin: '.5% auto', color: 'black', fontSize: '1.5rem' }}>
-      <Card.Body>
+      <Card.Body style={{ textAlign: 'center' }}>
         <Card.Title>
           {game.kills} - {game.deaths} - {game.assists}
         </Card.Title>

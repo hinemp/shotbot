@@ -5,7 +5,7 @@ const StatsCard = ({ stats }) => {
     return (
       <Card
         className="bg-dark text-white" 
-        style={{ maxWidth:'fit-content', margin: '1% auto', color: 'black', fontSize: '1.5rem'}}>
+        style={{ maxHeight: '55px', maxWidth:'fit-content', margin: '1% auto', color: 'black', fontSize: '1.5rem'}}>
         <Card.Body>
           <Card.Title 
             style={{ fontSize: '1rem', textAlign: 'justify' }}>
