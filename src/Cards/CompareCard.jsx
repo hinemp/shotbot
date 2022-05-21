@@ -5,7 +5,7 @@ const CompareCard = ({ game }) => {
   return (
     <Card
       className="bg-dark text-white"
-      style={{ width: 'fit-content', maxHeight: '100%', margin: '.5% auto', color: 'black', fontSize: '1.5rem' }}>
+      style={{ width: 'fit-content', maxHeight: '100%', margin: '5% auto', color: 'black', fontSize: '1.5rem' }}>
       <Card.Body style={{ textAlign: 'center' }}>
         <Card.Title>
           {game.kills} - {game.deaths} - {game.assists}
@@ -16,7 +16,7 @@ const CompareCard = ({ game }) => {
           height: 220
         }}></Card.Img>
         <Card.Text >
-          {game.record} {game.map}
+          {game.record}
         </Card.Text>
       </Card.Body>
     </Card>
