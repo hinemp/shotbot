@@ -102,68 +102,67 @@ const Compare = () => {
         </Row>
         <br />
       </Form>
-      {
-        viewCards ? (
-          <Container style={{ textAlign: 'center' }}>
-            <Row>
-              <Col>
-                {
-                  games1?.length > 0
-                    ? (
+      <Container>
+        {
+          games1?.length > 0
+            ? (
+              viewCards ? (
+                <Container style={{ textAlign: 'center' }}>
+                  <Row>
+                    <Col>
                       <>
                         {games1.map((game) => (
                           <CompareCard key={game.key} game={game} />
                         ))}
                       </>
-                    ) : (
-                      <p>Waiting for Info...</p>
-                    )
-                }
-              </Col>
-              <Col>
-                {
-                  games1?.length > 0
-                    ? (
-                      <>
-                        {games2.map((game) => (
-                          <CompareCard key={game.key} game={game} />
-                        ))}
-                      </>
-                    ) : (
-                      <p>Waiting for Info...</p>
-                    )
-                }
-              </Col>
-            </Row>
-          </Container>
-        ) : (
-          <Container style={{ textAlign: 'center' }}>
-            <Table striped bordered hover variant='dark'>
-              <thead>
-                <tr>
-                  <th>P1's Agent</th>
-                  <th>P1's KDA</th>
-                  <th>Outcome</th>
-                  <th>P2's KDA</th>
-                  <th>P2's Agent</th>
-                </tr>
-              </thead>
-              <tbody>
-                {listObj.map((game) => (
-                  <tr key={game.key}>
-                    <td>{game.agent1}</td>
-                    <td>{game.kda1}</td>
-                    <td>{game.outcome}</td>
-                    <td>{game.kda2}</td>
-                    <td>{game.agent2}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          </Container>
-        )
-      }
-
+                    </Col>
+                    <Col>
+                      {
+                        games1?.length > 0
+                          ? (
+                            <>
+                              {games2.map((game) => (
+                                <CompareCard key={game.key} game={game} />
+                              ))}
+                            </>
+                          ) : (
+                            <p>Waiting for Info...</p>
+                          )
+                      }
+                    </Col>
+                  </Row>
+                </Container> // Render Card View
+              ) : (
+                <Container style={{ textAlign: 'center' }}>
+                  <Table striped bordered hover variant='dark'>
+                    <thead>
+                      <tr>
+                        <th>P1's Agent</th>
+                        <th>P1's KDA</th>
+                        <th>Outcome</th>
+                        <th>P2's KDA</th>
+                        <th>P2's Agent</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {listObj.map((game) => (
+                        <tr key={game.key}>
+                          <td>{game.agent1}</td>
+                          <td>{game.kda1}</td>
+                          <td>{game.outcome}</td>
+                          <td>{game.kda2}</td>
+                          <td>{game.agent2}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Table>
+                </Container> // Render List View
+              )
+            ) : (
+              <p style={{ textAlign: 'center' }}>Waiting for info...</p>
+            )
+        }
+      </Container>
     </Container>
   )
 }
