@@ -80,7 +80,6 @@ const History = () => {
                 <Table striped bordered hover variant='dark'>
                   <thead>
                     <tr>
-                      <th>#</th>
                       <th>Agent</th>
                       <th>KDA</th>
                       <th>Outcome</th>
@@ -90,7 +89,6 @@ const History = () => {
                   <tbody>
                     {games.map((game) => (
                       <tr key={game.key}>
-                        <td>{game.key + 1}</td>
                         <td>{game.agent}</td>
                         <td>{game.kills}-{game.deaths}-{game.assists}</td>
                         <td>{game.record}</td>

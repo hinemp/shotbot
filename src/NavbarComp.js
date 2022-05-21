@@ -10,6 +10,7 @@ const NavbarComp = () => {
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/history">History</Nav.Link>
+            <Nav.Link href="/compare">Compare</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

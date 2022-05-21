@@ -3,7 +3,6 @@ const API_URL = 'https://api.henrikdev.xyz/valorant/'
 export const getLastFive = async (username, tag) => {
   const response = await fetch(`${API_URL}v3/matches/na/${username}/${tag}?filter=competitive`);
   const data = await response.json();
-  console.log(data.data[0]);
   // Data is now the games object like from the discord bot
   let games = [];
   for (let i = 0; i < 5; i++) {
@@ -23,7 +22,7 @@ export const getLastFive = async (username, tag) => {
       record = `D (${user_team.rounds_won}-${user_team.rounds_lost})`;
     }
     games.push({
-      key: i,
+      key: game_data.metadata.matchid,
       agent: agent,
       agent_img: agent_img,
       kills: user_stats.kills,
@@ -72,4 +71,43 @@ export const getRank = async (username, tag) => {
   obj.img = imgMap.get(obj.rank.replace(' ', '-'));
 
   return obj;
+}
+
+/**
+ * Given two users five game history, return which games in their last five they have played together
+ * 
+ * @param {object} user1 
+ * @param {object} user2 
+ */
+export const getCompare = async (user1, user2) => {
+  let tKeys = [];
+  for (const key in user1) {
+    if (Object.hasOwnProperty.call(user1, key)) {
+      tKeys.push(user1[key].key);
+    }
+  }
+  let user2Keys = [];
+  for (const key in user2) {
+    if (Object.hasOwnProperty.call(user2, key)) {
+      user2Keys.push(user2[key].key);
+    }
+  }
+  tKeys = tKeys.filter(val => user2Keys.includes(val));
+  
+  let user1T = [];
+  let user2T = [];
+
+  user1.forEach(game => {
+    if (tKeys.includes(game.key)) {
+      user1T.push(game);
+    }
+  });
+
+  user2.forEach(game => {
+    if (tKeys.includes(game.key)) {
+      user2T.push(game);
+    }
+  })
+
+  return { user1T, user2T };
 }
