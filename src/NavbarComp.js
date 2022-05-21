@@ -9,7 +9,7 @@ const NavbarComp = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/history">History</Nav.Link>
+            <Nav.Link href="/history">Match History</Nav.Link>
             <Nav.Link href="/compare">Compare</Nav.Link>
           </Nav>
         </Navbar.Collapse>
